@@ -53,14 +53,19 @@
         max-height: 450px;
         min-width: 70px;
     }
-    /* iframe {
-  max-inline-size: 450;
-  block-size: auto;
-} */
+
     
-    bg-dark {
+    .bg-dark {
         color: green;
         background-color: green;
+    }
+
+    .dp_profile{
+        max-width: 230px;
+        min-width: 70px;
+        max-height: 230px;
+        min-width: 70px;
+
     }
 </style>
 
@@ -82,9 +87,9 @@
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse">
+        <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse" style="">
             <div class="navbar-nav ms-auto py-0">
-                <a href="#home" class="nav-item nav-link active">Home</a>
+                <a href="#home" class="nav-item nav-link active" >Home</a>
                 <a href="#about" class="nav-item nav-link">About</a>
                 <a href="#skill" class="nav-item nav-link">Skills</a>
                 <!-- <a href="#service" class="nav-item nav-link">Services</a> -->
@@ -217,9 +222,9 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="display-5 mb-5">Skills & Experience</h1>
+                    <h1 class="display-5 mb-5">🧑🏻‍💻 Skills & Experience</h1>
                     <!-- <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum clita dolor duo clita sit.</p> -->
-                    <h3 class="mb-4">My Skills</h3>
+                    <h3 class="mb-4">Skills</h3>
                     <div class="row align-items-center">
                         <div class="col-md-6">
                             <div class="skill mb-4">
@@ -284,14 +289,14 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
                         <li class="nav-item w-50">
-                            <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill" href="#tab-1">Experience</button>
+                            <button class="nav-link w-100 py-3 fs-5 active" style="color: seagreen;" data-bs-toggle="pill" href="#tab-1">Experience</button>
                         </li>
                         <li class="nav-item w-50">
-                            <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-2">Education</button>
+                            <button class="nav-link w-100 py-3 fs-5" style="color: seagreen;" data-bs-toggle="pill" href="#tab-2">Education</button>
                         </li>
                     </ul>
-                    <div class="tab-content">
-                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                    <div class="tab-content" >
+                        <div id="tab-1" class="tab-pane fade show p-0 active" >
                             I have some experience in different technologies and completed some courses.<br>
                             <!-- <a href="https://www.w3schools.com/">Visit W3Schools.com!</a> -->
                             <b><a href="https://coursera.org/share/36d822291d6390b3da69e76d377872fa">IBM AI Engineering</a></b><br>
@@ -435,7 +440,7 @@
         <div class="container">
             <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-lg-6">
-                    <h1 class="display-5 mb-0">My Projects</h1>
+                    <h1 class="display-5 mb-0">🚀 Projects </h1>
                 </div>
                 <!-- <div class="col-lg-6 text-lg-end">
                     <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
@@ -523,7 +528,7 @@
         <div class="container py-5">
             <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-lg-6">
-                    <h1 class="display-5 mb-0">Let's Work Together</h1>
+                    <h1 class="display-5 mb-0">Let's collaborate</h1>
                 </div>
                 <!-- <div class="col-lg-6 text-lg-end">
                     <a class="btn btn-primary py-3 px-5" href="">Say Hello</a>
@@ -558,8 +563,9 @@
                     </div>
                 </div>
 
-                <!-- <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <p class="mb-4">If you want to email me please fill up the form<a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+                <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <img class="dp_profile" src="img\DP\picofme.png" alt="">
+                    <!-- <p class="mb-4">If you want to email me please fill up the form<a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
                     <form>
                         <div class="row g-3">
                             <div class="col-md-6">
@@ -590,8 +596,8 @@
                                 <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
                             </div>
                         </div>
-                    </form>
-                </div> -->
+                    </form> -->
+                </div>
             </div>
         </div>
     </div>
