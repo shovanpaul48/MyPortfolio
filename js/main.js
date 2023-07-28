@@ -124,3 +124,25 @@
     
 })(jQuery);
 
+
+// Author/ Admin login button 
+
+
+  document.getElementById('showFormBtn').addEventListener('click', function() {
+    var form = document.getElementById('AdminLogin');
+    var buttonContainer = document.getElementById('buttonContainer');
+  
+    // Show the form and hide the "Show Form" button
+    form.style.display = 'block';
+    buttonContainer.style.display = 'none';
+  });
+  
+  document.getElementById('cancelFormBtn').addEventListener('click', function() {
+    var form = document.getElementById('AdminLogin');
+    var buttonContainer = document.getElementById('buttonContainer');
+  
+    // Hide the form and show the "Show Form" button again
+    form.style.display = 'none';
+    buttonContainer.style.display = 'block';
+  });
+  
