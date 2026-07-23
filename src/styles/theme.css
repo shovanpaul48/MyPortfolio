@@ -1,0 +1,89 @@
+/* =====================================================
+   THEME TOKENS — Obsidian Teal Palette
+   ===================================================== */
+
+:root {
+  /* --- Dark Mode (default) --- */
+  --bg-primary: #080c10;
+  --bg-secondary: #0d1520;
+  --bg-tertiary: #111a27;
+
+  /* Glass surfaces */
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-hover: rgba(255, 255, 255, 0.07);
+  --glass-blur: blur(16px);
+
+  /* Accent — Teal/Cyan */
+  --accent-primary: #0891b2;
+  --accent-secondary: #22d3ee;
+  --accent-glow: rgba(8, 145, 178, 0.25);
+  --accent-gradient: linear-gradient(135deg, #0891b2 0%, #22d3ee 100%);
+
+  /* Amber — code labels, highlights */
+  --amber: #f59e0b;
+  --amber-muted: rgba(245, 158, 11, 0.15);
+
+  /* Text */
+  --text-primary: #f0f6ff;
+  --text-secondary: #94a3b8;
+  --text-muted: #4a5568;
+  --text-accent: #22d3ee;
+
+  /* Status colors */
+  --green: #10b981;
+  --red: #f43f5e;
+
+  /* Borders & dividers */
+  --border: rgba(255, 255, 255, 0.07);
+  --border-accent: rgba(8, 145, 178, 0.3);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 24px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 32px rgba(8, 145, 178, 0.15);
+
+  /* Spacing scale */
+  --section-py: 6rem;
+  --container-max: 1200px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+}
+
+/* --- Light Mode Override --- */
+[data-theme="light"] {
+  --bg-primary: #f0f4f8;
+  --bg-secondary: #e2eaf3;
+  --bg-tertiary: #d4e0ed;
+
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(8, 145, 178, 0.15);
+  --glass-hover: rgba(255, 255, 255, 0.8);
+
+  --accent-primary: #0369a1;
+  --accent-secondary: #0891b2;
+  --accent-glow: rgba(3, 105, 161, 0.15);
+  --accent-gradient: linear-gradient(135deg, #0369a1 0%, #0891b2 100%);
+
+  --amber: #d97706;
+  --amber-muted: rgba(217, 119, 6, 0.1);
+
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #94a3b8;
+  --text-accent: #0369a1;
+
+  --border: rgba(8, 145, 178, 0.12);
+  --border-accent: rgba(3, 105, 161, 0.25);
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 24px rgba(0, 0, 0, 0.12);
+  --shadow-glow: 0 0 32px rgba(8, 145, 178, 0.1);
+}
