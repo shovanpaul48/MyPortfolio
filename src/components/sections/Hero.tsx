@@ -1,25 +1,50 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import React, { useState, useEffect } from 'react'
+import { motion, useScroll, useSpring } from 'framer-motion'
 import { personal } from '@/lib/data'
 import styles from './Hero.module.css'
 
 const roles = ['GenAI Engineer', 'RAG Pipeline Builder', 'Backend Developer', 'LLM Systems Engineer']
 
 export default function Hero() {
+  // Top thin scroll progress bar
+  const { scrollYProgress } = useScroll()
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  })
+
   return (
     <section id="hero" className={styles.hero}>
+      {/* Scroll Progress Bar at very top of screen */}
+      <motion.div className={styles.progressBar} style={{ scaleX }} />
+
       {/* Ambient glow blobs */}
       <div className={styles.blob1} aria-hidden="true" />
       <div className={styles.blob2} aria-hidden="true" />
 
       <div className={`container ${styles.content}`}>
+        {/* Now Widget Pill */}
+        <motion.div
+          className={styles.nowWidget}
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.05 }}
+        >
+          <span className={styles.nowDot} />
+          <span className={styles.nowText}>
+            <strong>Now:</strong> Building an AI-powered Job Assistant App
+          </span>
+        </motion.div>
+
         {/* Greeting */}
         <motion.p
           className={`font-mono ${styles.greeting}`}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          transition={{ duration: 0.5, delay: 0.15 }}
         >
           <span className="text-amber">~/</span> hello world
         </motion.p>
@@ -29,7 +54,7 @@ export default function Hero() {
           className={styles.name}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
         >
           I&apos;m{' '}
           <span className="text-gradient">{personal.name}</span>
@@ -40,7 +65,7 @@ export default function Hero() {
           className={styles.roleWrapper}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.35 }}
+          transition={{ duration: 0.6, delay: 0.38 }}
         >
           <p className={styles.roleStatic}>Associate Software Developer at TCS &mdash;</p>
           <RoleCycler roles={roles} />
@@ -130,11 +155,10 @@ export default function Hero() {
   )
 }
 
-// Role cycler component
 function RoleCycler({ roles }: { roles: string[] }) {
-  const [index, setIndex] = React.useState(0)
+  const [index, setIndex] = useState(0)
 
-  React.useEffect(() => {
+  useEffect(() => {
     const id = setInterval(() => setIndex((i) => (i + 1) % roles.length), 2800)
     return () => clearInterval(id)
   }, [roles.length])
@@ -154,5 +178,3 @@ function RoleCycler({ roles }: { roles: string[] }) {
     </div>
   )
 }
-
-import React from 'react'

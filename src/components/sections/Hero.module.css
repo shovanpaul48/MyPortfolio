@@ -8,6 +8,18 @@
   padding-block: 8rem 4rem;
 }
 
+/* Scroll progress indicator line at very top of page */
+.progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent-gradient);
+  transform-origin: 0%;
+  z-index: 1000;
+}
+
 /* Ambient glow blobs */
 .blob1 {
   position: absolute;
@@ -37,6 +49,42 @@
   position: relative;
   z-index: 1;
   max-width: 800px;
+}
+
+/* Now Widget Pill */
+.nowWidget {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.35rem 0.85rem;
+  background: rgba(8, 145, 178, 0.08);
+  border: 1px solid var(--border-accent);
+  border-radius: 99px;
+  margin-bottom: 1.25rem;
+  backdrop-filter: blur(8px);
+}
+
+.nowDot {
+  width: 8px;
+  height: 8px;
+  background: var(--green);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.15); }
+}
+
+.nowText {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.nowText strong {
+  color: var(--accent-secondary);
 }
 
 .greeting {
