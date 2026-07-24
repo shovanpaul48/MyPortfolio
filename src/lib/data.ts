@@ -7,7 +7,7 @@ export const personal = {
   title: 'Associate Software Developer',
   tagline: 'Building intelligent systems with LLMs, RAG pipelines & GraphRAG.',
   location: 'Kolkata, India',
-  email: 'shovansundarpaul48@gmail.com',
+  email: 'shovanpaul48@gmail.com',
   github: 'https://github.com/shovanpaul48',
   linkedin: 'https://www.linkedin.com/in/shovan-sundar-paul-7b6a891b1/',
   leetcode: 'https://leetcode.com/shovanpaul48/',

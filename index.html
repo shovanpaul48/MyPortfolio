@@ -15,7 +15,8 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -46,7 +47,7 @@
         max-height: 550px;
         min-width: 70px;
     }
-    
+
     .lottie_2 {
         max-width: 450px;
         min-width: 70px;
@@ -54,79 +55,109 @@
         min-width: 70px;
     }
 
-    
+
     .bg-dark {
         color: green;
         background-color: green;
     }
 
-    .dp_profile{
+    .dp_profile {
         max-width: 230px;
         min-width: 70px;
         max-height: 230px;
         min-width: 70px;
 
     }
+
     /* Add styles for the main image and the small circular images here */
 
     .image-container {
-    position: relative;
-    display: inline-block;
+        position: relative;
+        display: inline-block;
     }
 
     .main-image {
-    width: 200px; /* Adjust the size of the main image as needed */
-    height: 200px;
+        width: 200px;
+        /* Adjust the size of the main image as needed */
+        height: 200px;
     }
 
     .image-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    display: none;
-    transform: translate(-50%, -50%);
-    text-align: center; /* Center the circular images */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: none;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        /* Center the circular images */
     }
 
     /* Add this hover effect */
     .image-container:hover .image-overlay {
-    display: block;
+        display: block;
     }
 
     .small-image-link {
-    display: inline-block;
-    border-radius: 50%; /* Creates the circular shape */
-    margin: 5px;
-    padding: 5px;
-    background-color: rgba(255, 255, 255, 0.8); /* Background color of the circular images */
-    position: absolute;
+        display: inline-block;
+        border-radius: 50%;
+        /* Creates the circular shape */
+        margin: 5px;
+        padding: 5px;
+        background-color: rgba(255, 255, 255, 0.8);
+        /* Background color of the circular images */
+        position: absolute;
     }
+
     .small-image-link img {
-    width: 40px; /* Adjust the size of the small images as needed */
-    height: 40px;
+        width: 40px;
+        /* Adjust the size of the small images as needed */
+        height: 40px;
     }
 
     /* Adjust the positioning of the small circular images to form a circular ring */
-    .small-image-link:nth-child(1) { top: -105px; left: 50%; transform: translateX(-50%) translateY(-100%); }
-    .small-image-link:nth-child(2) { top: 50%; left: 100px; transform: translateY(-50%) translateX(0); }
-    .small-image-link:nth-child(3) { top: 100px; left: 50%; transform: translateX(-50%) translateY(0); }
-    .small-image-link:nth-child(4) { top: 50%; left: -105px; transform: translateY(-50%) translateX(-100%); }
+    .small-image-link:nth-child(1) {
+        top: -105px;
+        left: 50%;
+        transform: translateX(-50%) translateY(-100%);
+    }
+
+    .small-image-link:nth-child(2) {
+        top: 50%;
+        left: 100px;
+        transform: translateY(-50%) translateX(0);
+    }
+
+    .small-image-link:nth-child(3) {
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .small-image-link:nth-child(4) {
+        top: 50%;
+        left: -105px;
+        transform: translateY(-50%) translateX(-100%);
+    }
 
     /* Add more small-image-link rules as needed to accommodate additional circular images */
 
     /* Define custom button styles */
     .custom-button {
-      background-color: #ff6600; /* Orange color */
-      color: #ffffff; /* White text color */
-      border-color: #ff6600; /* Border color */
+        background-color: #ff6600;
+        /* Orange color */
+        color: #ffffff;
+        /* White text color */
+        border-color: #ff6600;
+        /* Border color */
     }
 
     /* Define styles for a secondary custom button */
     .custom-button.secondary {
-      background-color: #007bff; /* Blue color */
-      border-color: #007bff; /* Border color */
+        background-color: #007bff;
+        /* Blue color */
+        border-color: #007bff;
+        /* Border color */
     }
-
 </style>
 <script>
     // Add event listener for the main image to show/hide the overlay on hover
@@ -134,18 +165,19 @@
     const imageOverlay = document.getElementById('imageOverlay');
 
     mainImage.addEventListener('mouseover', () => {
-    imageOverlay.style.display = 'block';
+        imageOverlay.style.display = 'block';
     });
 
     mainImage.addEventListener('mouseout', () => {
-    imageOverlay.style.display = 'none';
+        imageOverlay.style.display = 'none';
     });
 
 </script>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -154,7 +186,8 @@
 
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn"
+        data-wow-delay="0.1s">
         <a href="index.html" class="navbar-brand d-block d-lg-none">
             <!-- <h1 class="text-primary fw-bold m-0"></h1> -->
         </a>
@@ -163,7 +196,7 @@
         </button>
         <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse" style="">
             <div class="navbar-nav ms-auto py-0">
-                <a href="#home" class="nav-item nav-link active" >Home</a>
+                <a href="#home" class="nav-item nav-link active">Home</a>
                 <a href="#about" class="nav-item nav-link">About</a>
                 <a href="#skill" class="nav-item nav-link">Skills</a>
                 <!-- <a href="#service" class="nav-item nav-link">Services</a> -->
@@ -196,13 +229,13 @@
                     <div class="d-flex align-items-center pt-5">
                         <a href="https://flowcv.com/resume/gpv8kmjkg4" class="btn  btn-success">Download CV</a>
 
-                 <!-- Admin Login || Add Project  -->
+                        <!-- Admin Login || Add Project  -->
                         <!-- <div id="buttonContainer" style="padding:20px;">
                             <button class="btn btn-outline-dark" id="showFormBtn">Add Project</button>
                         </div>  -->
 
-                    
-                    <!-- <div>
+
+                        <!-- <div>
                         <form id="AdminLogin" style="display: none; padding:20px;">
 
                             <h1> Admin / Author Login </h1>
@@ -229,7 +262,8 @@
                     <!-- <img class="img-fluid" src="G:\My Drive\SHOVAN_PORTFOLIO\SITE\img\DP\picofme (7).png" alt=""> -->
                     <!-- height="450" width="450" -->
 
-                    <lottie-player class="lottie_1" src="https://assets10.lottiefiles.com/packages/lf20_3rwasyjy.json" background="transparent" speed="1" loop autoplay></lottie-player>
+                    <lottie-player class="lottie_1" src="https://assets10.lottiefiles.com/packages/lf20_3rwasyjy.json"
+                        background="transparent" speed="1" loop autoplay></lottie-player>
                 </div>
             </div>
         </div>
@@ -245,17 +279,28 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
 
 
-                    <lottie-player class="lottie_2" src="https://assets5.lottiefiles.com/private_files/lf30_8npirptd.json" background="transparent" speed="3" loop autoplay></lottie-player>
+                    <lottie-player class="lottie_2"
+                        src="https://assets5.lottiefiles.com/private_files/lf30_8npirptd.json" background="transparent"
+                        speed="3" loop autoplay></lottie-player>
 
                 </div>
 
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
 
-                    <p>Hello there, my name is Shovan Sundar Paul, and I am a computer science student with a passion for programming and technology, currently pursuing a MCA degree from IEM Kolkata. I also hold a BSc degree in Computer Science from Calcutta
-                        University. I have a strong foundation in programming languages like <b>Python</b>, <b>C</b>, and <b>Java</b>, and I am interested in <b> DevOps</b>, <b>Computer Vision</b>, <b>Deep Learning</b>, <b>AI</b>. In addition to my studies, I enjoy
-                        exploring new technologies and have experience working with <b>Github</b>, <b>Docker</b>,<b>PostgreSQL</b> <b>MongoDB</b>. I have some experience in <b>IBM Watson API</b> and did a small project using it. 
-                        I am currently focused on learning  DevOps and expanding my knowledge in this area. <br><br>In my free time, I enjoy reading about new technologies and experimenting with new programming projects. <br><br> Alongside my academic
-                        pursuits, I enjoy exploring creative outlets like drawing, digital painting, photography. </p>
+                    <p>Hello there, my name is Shovan Sundar Paul, and I am a computer science student with a passion
+                        for programming and technology, currently pursuing a MCA degree from IEM Kolkata. I also hold a
+                        BSc degree in Computer Science from Calcutta
+                        University. I have a strong foundation in programming languages like <b>Python</b>, <b>C</b>,
+                        and <b>Java</b>, and I am interested in <b> DevOps</b>, <b>Computer Vision</b>, <b>Deep
+                            Learning</b>, <b>AI</b>. In addition to my studies, I enjoy
+                        exploring new technologies and have experience working with <b>Github</b>,
+                        <b>Docker</b>,<b>PostgreSQL</b> <b>MongoDB</b>. I have some experience in <b>IBM Watson API</b>
+                        and did a small project using it.
+                        I am currently focused on learning DevOps and expanding my knowledge in this area. <br><br>In my
+                        free time, I enjoy reading about new technologies and experimenting with new programming
+                        projects. <br><br> Alongside my academic
+                        pursuits, I enjoy exploring creative outlets like drawing, digital painting, photography.
+                    </p>
 
                 </div>
             </div>
@@ -335,18 +380,22 @@
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <ul class="nav nav-pills rounded border border-3 border-primary mb-5">
-                        <li class="nav-item w-50" >
-                            <button class="btn-success nav-link w-100 py-3 fs-5  active" style="border-radius: 4px;" data-bs-toggle="pill" href="#tab-1">📄 Certificate</button>
+                        <li class="nav-item w-50">
+                            <button class="btn-success nav-link w-100 py-3 fs-5  active" style="border-radius: 4px;"
+                                data-bs-toggle="pill" href="#tab-1">📄 Certificate</button>
                         </li>
                         <li class="nav-item w-50" style="border-radius: 45px;">
-                            <button class="btn-success nav-link w-100 py-3 fs-5" style="border-radius: 4px;"  data-bs-toggle="pill" href="#tab-2">🎓 Education</button>
+                            <button class="btn-success nav-link w-100 py-3 fs-5" style="border-radius: 4px;"
+                                data-bs-toggle="pill" href="#tab-2">🎓 Education</button>
                         </li>
                     </ul>
-                    <div class="tab-content" >
-                        <div id="tab-1" class="tab-pane fade show p-0 active" >
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
                             I have some experience in different technologies and completed some courses.<br>
-                            <b><a href="https://coursera.org/share/36d822291d6390b3da69e76d377872fa">IBM AI Engineering</a></b><br>
-                            <b><a href="https://coursera.org/share/b5ab6a7d35675e1061ad9aa52b2bab48">IBM Applied AI </a></b>
+                            <b><a href="https://coursera.org/share/36d822291d6390b3da69e76d377872fa">IBM AI
+                                    Engineering</a></b><br>
+                            <b><a href="https://coursera.org/share/b5ab6a7d35675e1061ad9aa52b2bab48">IBM Applied AI
+                                </a></b>
 
 
                         </div>
@@ -372,7 +421,7 @@
                                     <h5>Higher Secondary</h5>
                                     <hr class="text-primary my-2">
                                     <p class="text-primary mb-1">2018 - 2019 | 81.66%</p>
-                                    <h6 class="mb-0">Ghatal Y.S.S Vidyapith  </h6>
+                                    <h6 class="mb-0">Ghatal Y.S.S Vidyapith </h6>
                                 </div>
                             </div>
                         </div>
@@ -401,7 +450,10 @@
                                 <p style="color: beige;">IC Test and Identifying device </p>
 
                                 <!-- <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a> -->
-                                <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/shovanpaul48/IC-Testing-device"><i class="fa fa-link"></i></a></h3>
+                                <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1"
+                                    href="https://github.com/shovanpaul48/IC-Testing-device"><i
+                                        class="fa fa-link"></i></a>
+                            </h3>
                         </div>
                     </div>
                 </div>
@@ -412,7 +464,9 @@
                             <h3>
                                 <p style="color: beige;">Movie Recommendation System</p>
                                 <!-- <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-22.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a> -->
-                                <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/shovanpaul48/Movie-Recommendation-system"><i class="fa fa-link"></i></a>
+                                <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1"
+                                    href="https://github.com/shovanpaul48/Movie-Recommendation-system"><i
+                                        class="fa fa-link"></i></a>
                             </h3>
                         </div>
                     </div>
@@ -421,9 +475,13 @@
                     <div class="portfolio-img rounded overflow-hidden">
                         <img class="img-fluid" src="img/CV_HandGesture.png" alt="">
                         <div class="portfolio-btn">
-                            <h3> <p style="color: rgb(10, 168, 26);">Computer Vision Hand gesture system </p> </h3>
+                            <h3>
+                                <p style="color: rgb(10, 168, 26);">Computer Vision Hand gesture system </p>
+                            </h3>
                             <!-- <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a> -->
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/shovanpaul48/COMPUTER-VISION-__-Hand-Gesture-.git"><i class="fa fa-link"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1"
+                                href="https://github.com/shovanpaul48/COMPUTER-VISION-__-Hand-Gesture-.git"><i
+                                    class="fa fa-link"></i></a>
                         </div>
                     </div>
                 </div>
@@ -433,9 +491,13 @@
                     <div class="portfolio-img rounded overflow-hidden">
                         <img class="img-fluid" src="img/website_blocker.jpg" alt="">
                         <div class="portfolio-btn">
-                            <h3>  <p style="color: rgb(212, 14, 14);">Website Blocker</p></h3>
+                            <h3>
+                                <p style="color: rgb(212, 14, 14);">Website Blocker</p>
+                            </h3>
                             <!-- <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-5.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a> -->
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/shovanpaul48/Website-Blocker.git"><i class="fa fa-link"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1"
+                                href="https://github.com/shovanpaul48/Website-Blocker.git"><i
+                                    class="fa fa-link"></i></a>
                         </div>
                     </div>
                 </div>
@@ -443,9 +505,12 @@
                     <div class="portfolio-img rounded overflow-hidden">
                         <img class="img-fluid" src="img\Matrix_rain.jpg" alt="">
                         <div class="portfolio-btn">
-                            <h3>  <p style="color: rgb(23, 135, 27);">Matrix Rain</p></h3>
+                            <h3>
+                                <p style="color: rgb(23, 135, 27);">Matrix Rain</p>
+                            </h3>
                             <!-- <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/project-6.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a> -->
-                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="https://github.com/shovanpaul48/Matrix-Rain.git"><i class="fa fa-link"></i></a>
+                            <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1"
+                                href="https://github.com/shovanpaul48/Matrix-Rain.git"><i class="fa fa-link"></i></a>
                         </div>
                     </div>
                 </div>
@@ -476,7 +541,7 @@
                     <h3 class="fw-bold">+91 9091869812</h3>
                     <hr class="w-100">
                     <p class="mb-2">Email me: </p>
-                    <h3 class="fw-bold">shovansundarpaul48@gmail.com</h3>
+                    <h3 class="fw-bold">shovanpaul48@gmail.com</h3>
                     <hr class="w-100">
                     <!-- <p class="mb-2">Mail me:</p>
                     <h3 class="fw-bold">shovansundrpaul48+port@gmail.com</h3>
@@ -484,14 +549,19 @@
                     <p class="mb-2">Follow me:</p>
                     <div class="d-flex pt-2">
                         <!-- <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-twitter"></i></a> -->
-                        <a class="btn btn-square btn-primary me-2" href="https://www.facebook.com/Shovansundar/"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square custom-button secondary me-2" href="https://www.linkedin.com/in/shovan-sundar-paul-7b6a891b1/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="https://www.facebook.com/Shovansundar/"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square custom-button secondary me-2"
+                            href="https://www.linkedin.com/in/shovan-sundar-paul-7b6a891b1/"><i
+                                class="fab fa-linkedin-in"></i></a>
                         <!-- <a class="btn btn-square btn-primary me-2" href="https://www.instagram.com/shovan__paul/"><i class="fab fa-instagram"></i></a> -->
-                        <a class="btn btn-square btn-dark me-2" href="https://github.com/shovanpaul48/"><img class="img-fluid" src="img/githubLogo3.png" alt=""></a>
+                        <a class="btn btn-square btn-dark me-2" href="https://github.com/shovanpaul48/"><img
+                                class="img-fluid" src="img/githubLogo3.png" alt=""></a>
                         <a class="btn btn-square custom-button me-2" href="https://leetcode.com/shovanpaul48/">
                             <iconify-icon icon="simple-icons:leetcode"></iconify-icon>
                         </a>
-                        <a class="btn btn-square btn-success me-2" href="https://www.hackerrank.com/shovanpaul48?hr_r=1"><i class="fab fa-hackerrank"></i></a>
+                        <a class="btn btn-square btn-success me-2"
+                            href="https://www.hackerrank.com/shovanpaul48?hr_r=1"><i class="fab fa-hackerrank"></i></a>
                         <!-- <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-linkedin-in"></i></a> -->
 
 
@@ -503,12 +573,12 @@
                     <div class="image-container">
                         <!-- <img src="img\DP\picofme.png" alt="Main Image" class="main-image" id="mainImage"> -->
                         <div class="image-overlay" id="imageOverlay">
-                          <!-- <a href="#" class="small-image-link"><img src="img\DP\picofme (5).png" alt="Small Image 1"></a> -->
-                          <!-- <a href="#" class="small-image-link"><img src="img\DP\picofme (6).png" alt="Small Image 1"></a> -->
-                          <!-- <a href="#" class="small-image-link"><img src="img\DP\picofme (7).png" alt="Small Image 2"></a> -->
-                          <!-- <a href="#" class="small-image-link"><img src="img\DP\picofme (8).png" alt="Small Image 3"></a> -->
+                            <!-- <a href="#" class="small-image-link"><img src="img\DP\picofme (5).png" alt="Small Image 1"></a> -->
+                            <!-- <a href="#" class="small-image-link"><img src="img\DP\picofme (6).png" alt="Small Image 1"></a> -->
+                            <!-- <a href="#" class="small-image-link"><img src="img\DP\picofme (7).png" alt="Small Image 2"></a> -->
+                            <!-- <a href="#" class="small-image-link"><img src="img\DP\picofme (8).png" alt="Small Image 3"></a> -->
 
-                    
+
 
                         </div>
                     </div>
@@ -529,8 +599,8 @@
                     &copy; <a class="border-bottom text-secondary" href="#">Your Site Name</a>, All Right Reserved.
                 </div>
                 <div class="col-md-6 text-center text-md-end"> -->
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    <!-- Designed By <a class="border-bottom text-secondary" href="https://htmlcodex.com">HTML Codex</a>
+    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+    <!-- Designed By <a class="border-bottom text-secondary" href="https://htmlcodex.com">HTML Codex</a>
                     <br>Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
                 </div>
             </div>
