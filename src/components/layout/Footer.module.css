@@ -1,7 +1,7 @@
 .footer {
   border-top: 1px solid var(--border);
-  padding-block: 1.75rem;
-  margin-top: 2rem;
+  padding-block: 1.5rem;
+  margin-top: 3rem;
 }
 
 .inner {
@@ -12,19 +12,41 @@
   gap: 1rem;
 }
 
+.copy {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
 .links {
   display: flex;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
 }
 
 .link {
-  font-size: 0.85rem;
-  color: var(--text-muted);
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+  text-decoration: none;
   font-weight: 500;
   transition: color var(--transition-fast);
-  text-decoration: none;
 }
 
 .link:hover {
   color: var(--accent-secondary);
+}
+
+.llmLink {
+  font-size: 0.75rem;
+  color: var(--amber);
+  background: rgba(245, 158, 11, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.llmLink:hover {
+  opacity: 0.8;
 }

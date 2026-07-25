@@ -6,22 +6,28 @@ export default function Footer() {
 
   return (
     <footer className={styles.footer}>
-      <div className={`container ${styles.inner}`}>
-        <p className="font-mono" style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>
-          © {year} Shovan Paul — Built with Next.js + Framer Motion
-        </p>
+      <div className={styles.inner}>
+        <div className={styles.credits}>
+          <p className={`font-mono ${styles.copy}`}>
+            © {year} {personal.name} — Crafted with Next.js & Framer Motion
+          </p>
+        </div>
+
         <div className={styles.links}>
-          <a href={personal.github} target="_blank" rel="noopener noreferrer" className={styles.link} aria-label="GitHub">
+          <a href={personal.github} target="_blank" rel="noopener noreferrer" className={styles.link}>
             GitHub
           </a>
-          <a href={personal.linkedin} target="_blank" rel="noopener noreferrer" className={styles.link} aria-label="LinkedIn">
+          <a href={personal.linkedin} target="_blank" rel="noopener noreferrer" className={styles.link}>
             LinkedIn
           </a>
-          <a href={personal.leetcode} target="_blank" rel="noopener noreferrer" className={styles.link} aria-label="LeetCode">
+          <a href={personal.leetcode} target="_blank" rel="noopener noreferrer" className={styles.link}>
             LeetCode
           </a>
-          <a href={`mailto:${personal.email}`} className={styles.link} aria-label="Email">
+          <a href={`mailto:${personal.email}`} className={styles.link}>
             Email
+          </a>
+          <a href="/llms.txt" target="_blank" className={`font-mono ${styles.llmLink}`}>
+            llms.txt ↗
           </a>
         </div>
       </div>

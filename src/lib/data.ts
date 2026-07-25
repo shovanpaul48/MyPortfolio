@@ -1,26 +1,33 @@
 // =====================================================
-// lib/data.ts — All static content for the portfolio
+// lib/data.ts — Centralized static data for portfolio
 // =====================================================
 
 export const personal = {
   name: 'Shovan Paul',
-  title: 'Associate Software Developer',
-  tagline: 'Building intelligent systems with LLMs, RAG pipelines & GraphRAG.',
+  title: 'GenAI & Backend Engineer',
+  role: 'Associate Software Developer',
+  company: 'TCS Kolkata',
+  companyUrl: 'https://www.tcs.com/',
+  tagline: 'Building production RAG pipelines, GraphRAG with Neo4j, and FastAPI LLM microservices.',
   location: 'Kolkata, India',
-  email: 'shovanpaul48@gmail.com',
+  locationUrl: 'https://maps.google.com/?q=Kolkata,India',
+  email: 'shovansundarpaul48@gmail.com',
   github: 'https://github.com/shovanpaul48',
   linkedin: 'https://www.linkedin.com/in/shovan-sundar-paul-7b6a891b1/',
   leetcode: 'https://leetcode.com/shovanpaul48/',
   leetcodeUsername: 'shovanpaul48',
   githubUsername: 'shovanpaul48',
-  resumeUrl: '#', // TODO: replace with FlowCV link
+  resumeUrl: '#', // FlowCV resume link
 }
 
 export const experience = [
   {
+    id: 'tcs',
     company: 'Tata Consultancy Services (TCS)',
+    companyUrl: 'https://www.tcs.com/',
     role: 'Associate Software Developer',
     location: 'Kolkata, India',
+    startDate: '2024-01-01',
     period: 'Jan 2024 – Present',
     type: 'Full-time',
     bullets: [
@@ -38,14 +45,18 @@ export const education = [
   {
     degree: 'Master of Computer Applications (MCA)',
     institution: 'Institute of Engineering & Management (IEM)',
+    institutionUrl: 'https://iem.edu.in/',
     location: 'Kolkata, India',
     period: '2022 – 2024',
+    details: 'Focused on Advanced Algorithms, Software Engineering, and AI/Machine Learning.',
   },
   {
     degree: 'B.Sc. Computer Science (Honours)',
     institution: 'University of Calcutta',
+    institutionUrl: 'https://www.caluniv.ac.in/',
     location: 'Kolkata, India',
     period: '2019 – 2022',
+    details: 'Core Data Structures, Database Systems, Computer Architecture, and Discrete Mathematics.',
   },
 ]
 
@@ -57,13 +68,34 @@ export const certifications = [
     badgeColor: '#0078d4',
     verifyUrl: 'https://learn.microsoft.com/en-us/credentials/certifications/fabric-analytics-engineer-associate/',
     icon: '🏅',
+    date: '2024',
+  },
+  {
+    title: 'IBM AI Engineering Professional Certificate',
+    code: 'IBM AI',
+    issuer: 'Coursera / IBM',
+    badgeColor: '#052147',
+    verifyUrl: 'https://coursera.org/share/36d822291d6390b3da69e76d377872fa',
+    icon: '🧠',
+    date: '2023',
+  },
+  {
+    title: 'IBM Applied AI Professional Certificate',
+    code: 'IBM AppAI',
+    issuer: 'Coursera / IBM',
+    badgeColor: '#052147',
+    verifyUrl: 'https://coursera.org/share/b5ab6a7d35675e1061ad9aa52b2bab48',
+    icon: '⚡',
+    date: '2023',
   },
 ]
 
 export type Project = {
+  id: string
   title: string
   description: string
   status: 'live' | 'building' | 'archived'
+  statusText: string
   techStack: string[]
   github?: string
   demo?: string
@@ -73,30 +105,36 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: 'AI-Powered Job Assistant',
+    id: 'job-assistant',
+    title: 'AI-Powered Job Assistant App',
     description:
-      'End-to-end career intelligence app: resumes parsed → multi-portal job search across Adzuna, JSearch & TinyFish APIs → LLM-based job matching and ranking pipeline. Designed for precision, not spray-and-pray.',
+      'End-to-end career intelligence application: resume parsing → multi-portal job search (Adzuna, JSearch, TinyFish APIs) → LLM-based job matching and ranking pipeline designed for precision matching.',
     status: 'building',
+    statusText: 'In Progress',
     featured: true,
     highlight: 'LLM Matching',
     techStack: ['Python', 'FastAPI', 'LangChain', 'React', 'Next.js', 'Adzuna API', 'JSearch API'],
     github: 'https://github.com/shovanpaul48',
   },
   {
+    id: 'profit-gpt',
     title: 'Pro(fit)GPT',
     description:
-      'Multi-LLM NSE stock analysis pipeline. Combines Neo4j GraphRAG for entity-relationship reasoning, LangChain agents, Groq/Llama inference, APScheduler for market-hours triggers, and Telegram delivery for real-time stock insights.',
+      'Multi-LLM NSE stock analysis pipeline combining Neo4j GraphRAG for entity-relationship reasoning, LangChain agents, Groq/Llama inference, APScheduler for market-hours triggers, and Telegram delivery.',
     status: 'live',
+    statusText: 'Live',
     featured: true,
     highlight: 'GraphRAG',
     techStack: ['Python', 'LangChain', 'Neo4j', 'Groq', 'Llama', 'APScheduler', 'Telegram Bot API'],
     github: 'https://github.com/shovanpaul48',
   },
   {
+    id: 'cresco',
     title: 'CRESCO',
     description:
-      'Personal productivity and career-growth web app. Full-stack with React frontend, FastAPI backend, and SQLite persistence. Designed to track goals, habits, and career milestones in one dashboard.',
+      'Personal productivity and career-growth web app built with React, FastAPI, and SQLite persistence to track goals, habits, and career milestones in a unified dashboard.',
     status: 'live',
+    statusText: 'Live',
     featured: true,
     highlight: 'Full-Stack',
     techStack: ['React', 'FastAPI', 'SQLite', 'Python', 'TypeScript'],
@@ -106,77 +144,113 @@ export const projects: Project[] = [
 
 export const olderProjects: Project[] = [
   {
+    id: 'ic-tester',
     title: 'IC Tester',
     description: 'Hardware-software interface for automated IC chip testing.',
     status: 'archived',
+    statusText: 'Archived',
     featured: false,
     techStack: ['Python', 'Raspberry Pi'],
+    github: 'https://github.com/shovanpaul48/IC-Testing-device',
   },
   {
+    id: 'movie-recommender',
     title: 'Movie Recommender',
     description: 'Collaborative filtering-based movie recommendation system.',
     status: 'archived',
+    statusText: 'Archived',
     featured: false,
     techStack: ['Python', 'Scikit-learn', 'Pandas'],
+    github: 'https://github.com/shovanpaul48/Movie-Recommendation-system',
   },
   {
+    id: 'hand-gesture-cv',
     title: 'Hand Gesture CV',
     description: 'Real-time hand gesture recognition using OpenCV and MediaPipe.',
     status: 'archived',
+    statusText: 'Archived',
     featured: false,
     techStack: ['Python', 'OpenCV', 'MediaPipe'],
+    github: 'https://github.com/shovanpaul48/COMPUTER-VISION-__-Hand-Gesture-.git',
   },
   {
+    id: 'website-blocker',
     title: 'Website Blocker',
     description: 'Productivity tool to block distracting websites on a schedule.',
     status: 'archived',
+    statusText: 'Archived',
     featured: false,
     techStack: ['Python'],
+    github: 'https://github.com/shovanpaul48/Website-Blocker.git',
   },
   {
+    id: 'matrix-rain',
     title: 'Matrix Rain',
-    description: 'Terminal-style Matrix digital rain animation.',
+    description: 'Terminal-style Matrix digital rain animation built with HTML5 Canvas.',
     status: 'archived',
+    statusText: 'Archived',
     featured: false,
     techStack: ['JavaScript', 'Canvas API'],
+    github: 'https://github.com/shovanpaul48/Matrix-Rain.git',
   },
 ]
 
-export type SkillCategory = {
-  category: string
-  icon: string
-  skills: string[]
+export type TechItem = {
+  name: string
+  url: string
 }
 
-export const skillCategories: SkillCategory[] = [
+export type SkillCategory = {
+  num: string
+  category: string
+  items: TechItem[]
+}
+
+export const stackCategories: SkillCategory[] = [
   {
-    category: 'AI / LLM',
-    icon: '🧠',
-    skills: ['LangChain', 'LangGraph', 'RAG Pipelines', 'GraphRAG', 'Azure OpenAI', 'Groq', 'Llama', 'Langfuse'],
+    num: '01',
+    category: 'Languages',
+    items: [
+      { name: 'Python', url: 'https://www.python.org/' },
+      { name: 'TypeScript', url: 'https://www.typescriptlang.org/' },
+      { name: 'JavaScript', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
+      { name: 'SQL', url: 'https://en.wikipedia.org/wiki/SQL' },
+    ],
   },
   {
-    category: 'Backend',
-    icon: '⚙️',
-    skills: ['Python', 'FastAPI', 'APScheduler', 'REST APIs', 'WebSockets'],
+    num: '02',
+    category: 'AI & LLM Frameworks',
+    items: [
+      { name: 'LangChain', url: 'https://www.langchain.com/' },
+      { name: 'LangGraph', url: 'https://langchain-ai.github.io/langgraph/' },
+      { name: 'Azure OpenAI', url: 'https://azure.microsoft.com/en-us/products/ai-services/openai-service' },
+      { name: 'RAG Pipelines', url: 'https://www.mongodb.com/basics/retrieval-augmented-generation' },
+      { name: 'GraphRAG', url: 'https://github.com/microsoft/graphrag' },
+      { name: 'Groq / Llama', url: 'https://groq.com/' },
+    ],
   },
   {
-    category: 'Databases',
-    icon: '🗄️',
-    skills: ['Neo4j', 'OpenSearch', 'SQLite', 'PostgreSQL'],
+    num: '03',
+    category: 'Backend & Databases',
+    items: [
+      { name: 'FastAPI', url: 'https://fastapi.tiangolo.com/' },
+      { name: 'Neo4j', url: 'https://neo4j.com/' },
+      { name: 'OpenSearch', url: 'https://opensearch.org/' },
+      { name: 'PostgreSQL', url: 'https://www.postgresql.org/' },
+      { name: 'SQLite', url: 'https://www.sqlite.org/' },
+      { name: 'REST APIs', url: 'https://restfulapi.net/' },
+    ],
   },
   {
-    category: 'Frontend',
-    icon: '🎨',
-    skills: ['React', 'Next.js', 'TypeScript', 'Framer Motion'],
-  },
-  {
-    category: 'Observability',
-    icon: '📊',
-    skills: ['Grafana', 'Langfuse', 'Prometheus'],
-  },
-  {
-    category: 'DevOps & Cloud',
-    icon: '☁️',
-    skills: ['Azure', 'GitHub Actions', 'Docker', 'Git'],
+    num: '04',
+    category: 'DevOps & Observability',
+    items: [
+      { name: 'Langfuse', url: 'https://langfuse.com/' },
+      { name: 'Grafana', url: 'https://grafana.com/' },
+      { name: 'Docker', url: 'https://www.docker.com/' },
+      { name: 'GitHub Actions', url: 'https://github.com/features/actions' },
+      { name: 'Azure', url: 'https://azure.microsoft.com/' },
+      { name: 'Git', url: 'https://git-scm.com/' },
+    ],
   },
 ]
