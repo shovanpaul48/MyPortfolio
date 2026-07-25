@@ -1,0 +1,33 @@
+# Shovan Paul — GenAI & Backend Engineer
+
+> Associate Software Developer at TCS Kolkata (~1.5 years experience). Specializing in LangChain, LangGraph, RAG pipelines, GraphRAG with Neo4j, FastAPI, and Azure OpenAI.
+
+## Contact & Links
+- Website: https://shovanpaul48.github.io/MyPortfolio/
+- Email: shovansundarpaul48@gmail.com
+- GitHub: https://github.com/shovanpaul48
+- LinkedIn: https://www.linkedin.com/in/shovan-sundar-paul-7b6a891b1/
+- LeetCode: https://leetcode.com/shovanpaul48/
+
+## Work Experience
+### Tata Consultancy Services (TCS) — Associate Software Developer
+*Kolkata, India | Jan 2024 – Present*
+- Production RAG pipelines using LangChain, Azure OpenAI, and OpenSearch.
+- GraphRAG systems with Neo4j for multi-hop entity reasoning.
+- FastAPI microservices for LLM orchestration and inference routing (Groq / Llama).
+- Observability and tracing with Langfuse and Grafana.
+- Stateful multi-agent workflows using LangGraph.
+
+## Key Projects
+- **AI-Powered Job Assistant App** (In Progress): Resume parsing → multi-portal search (Adzuna, JSearch, TinyFish) → LLM matching & ranking.
+- **Pro(fit)GPT**: Multi-LLM NSE stock analysis pipeline using Neo4j GraphRAG, LangChain, Groq/Llama, APScheduler, and Telegram.
+- **CRESCO**: Career-growth and productivity web app (React + FastAPI + SQLite).
+
+## Certifications
+- Microsoft Certified: Fabric Analytics Engineer Associate (DP-700)
+- IBM AI Engineering Professional Certificate
+- IBM Applied AI Professional Certificate
+
+## Education
+- Master of Computer Applications (MCA) — IEM Kolkata (2022–2024)
+- B.Sc. Computer Science (Honours) — University of Calcutta (2019–2022)

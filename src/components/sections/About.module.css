@@ -1,0 +1,73 @@
+.section {
+  margin-bottom: 2rem;
+}
+
+.card {
+  width: 100%;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.label {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--amber);
+  font-weight: 700;
+}
+
+.nowBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(8, 145, 178, 0.08);
+  border: 1px solid var(--border-accent);
+  border-radius: 99px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.nowDot {
+  width: 6px;
+  height: 6px;
+  background: var(--green);
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.6);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.bioText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+.highlight {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.accentText {
+  color: var(--accent-secondary);
+  font-weight: 600;
+}
+
+.amberText {
+  color: var(--amber);
+  font-weight: 600;
+}

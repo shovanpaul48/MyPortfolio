@@ -1,0 +1,81 @@
+.layoutWrapper {
+  position: relative;
+  min-height: 100vh;
+  padding-block: 2.5rem 4rem;
+}
+
+.topAccentLine {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent-gradient);
+  z-index: 999;
+}
+
+.layoutGrid {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.sidebarCol {
+  position: sticky;
+  top: 2.5rem;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+}
+
+/* Custom scrollbar for sidebar if content overflows vertically on small laptop screens */
+.sidebarCol::-webkit-scrollbar {
+  width: 4px;
+}
+.sidebarCol::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sidebarCol::-webkit-scrollbar-thumb {
+  background: var(--border-accent);
+  border-radius: 99px;
+}
+
+.mainCol {
+  width: 100%;
+  min-width: 0; /* Prevents grid blowout */
+}
+
+/* Floating Theme Toggle (Bottom Right Corner) */
+.floatingThemeToggle {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 900;
+  box-shadow: var(--shadow-md);
+  border-radius: 50%;
+}
+
+@media (max-width: 1024px) {
+  .layoutGrid {
+    grid-template-columns: 300px 1fr;
+    gap: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .layoutWrapper {
+    padding-block: 1.25rem 3rem;
+  }
+
+  .layoutGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .sidebarCol {
+    position: relative;
+    top: 0;
+    max-height: none;
+    overflow-y: visible;
+  }
+}

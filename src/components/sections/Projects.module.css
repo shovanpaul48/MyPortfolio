@@ -1,0 +1,186 @@
+.section {
+  margin-bottom: 2rem;
+}
+
+.header {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--amber);
+  font-weight: 700;
+}
+
+.title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-top: 0.25rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.entry {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.entry:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.entryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.projectTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.statusPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 99px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-family: var(--font-jetbrains), monospace;
+  letter-spacing: 0.03em;
+}
+
+.statusBuilding {
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--amber);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.statusLive {
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--green);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.liveDot {
+  width: 6px;
+  height: 6px;
+  background: var(--green);
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(16, 185, 129, 0.6);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.techChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+/* Older Projects Drawer */
+.olderSection {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.olderToggleBtn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.olderToggleBtn:hover {
+  color: var(--accent-secondary);
+  border-color: var(--accent-secondary);
+}
+
+.olderGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.85rem;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+.olderItem {
+  padding: 0.85rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.olderHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.olderTitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.olderLink {
+  font-size: 0.72rem;
+  color: var(--accent-secondary);
+  text-decoration: none;
+  font-family: var(--font-jetbrains), monospace;
+}
+
+.olderDesc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  flex: 1;
+}
+
+.olderChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.2rem;
+}

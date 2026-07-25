@@ -1,0 +1,112 @@
+.section {
+  margin-bottom: 2rem;
+}
+
+.header {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--amber);
+  font-weight: 700;
+}
+
+.title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-top: 0.25rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.entry {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.entryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.companyRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.companyName {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.companyName:hover {
+  color: var(--accent-secondary);
+}
+
+.roleTitle {
+  font-size: 0.95rem;
+  color: var(--accent-secondary);
+  font-weight: 600;
+}
+
+.periodBlock {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+}
+
+.period {
+  color: var(--amber);
+}
+
+.duration {
+  color: var(--text-muted);
+}
+
+.bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.bulletItem {
+  display: flex;
+  gap: 0.65rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.bulletDot {
+  color: var(--accent-secondary);
+  font-weight: 800;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+.techChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}

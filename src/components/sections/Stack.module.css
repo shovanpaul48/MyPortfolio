@@ -1,0 +1,82 @@
+.section {
+  margin-bottom: 2rem;
+}
+
+.header {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--amber);
+  font-weight: 700;
+}
+
+.title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-top: 0.25rem;
+}
+
+.categoriesGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.categoryBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.categoryBlock:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.categoryHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.catNum {
+  font-size: 0.75rem;
+  color: var(--amber);
+  font-weight: 700;
+}
+
+.catName {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pillsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.techPill {
+  text-decoration: none;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.techPill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--accent-glow);
+  border-color: var(--accent-secondary);
+}
+
+.linkArrow {
+  font-size: 0.65rem;
+  opacity: 0.6;
+}

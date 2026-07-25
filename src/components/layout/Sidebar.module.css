@@ -1,0 +1,249 @@
+.sidebar {
+  width: 100%;
+}
+
+.sidebarCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* Identity */
+.identity {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.avatarRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  background: var(--accent-gradient);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.1rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 16px var(--accent-glow);
+  flex-shrink: 0;
+  font-family: var(--font-jetbrains), monospace;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.title {
+  font-size: 0.8rem;
+  color: var(--accent-secondary);
+  margin-top: 0.2rem;
+}
+
+.roleLine {
+  font-size: 0.9rem;
+}
+
+.roleLink {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.roleLink:hover {
+  color: var(--text-primary);
+}
+
+.companyHighlight {
+  color: var(--amber);
+  font-weight: 600;
+}
+
+.tagline {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Metadata: Location + Clock */
+.metaBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-block: 0.75rem;
+  border-block: 1px solid var(--border);
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+}
+
+.metaIcon {
+  font-size: 0.9rem;
+}
+
+.metaLink {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.metaLink:hover {
+  color: var(--accent-secondary);
+}
+
+.clockDot {
+  width: 7px;
+  height: 7px;
+  background: var(--green);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.clockText {
+  font-size: 0.78rem;
+  color: var(--green);
+  letter-spacing: 0.03em;
+}
+
+/* Command Palette Trigger Button */
+.cmdBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.6rem 0.85rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-size: 0.825rem;
+  cursor: pointer;
+  transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.cmdBtn:hover {
+  background: var(--glass-hover);
+  border-color: var(--accent-secondary);
+  color: var(--text-primary);
+}
+
+.cmdBtnLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cmdKbd {
+  font-family: var(--font-jetbrains), monospace;
+  font-size: 0.7rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  color: var(--text-secondary);
+}
+
+/* Social Row */
+.socialRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.socialBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast);
+}
+
+.socialBtn:hover {
+  border-color: var(--accent-secondary);
+  color: var(--text-primary);
+  background: var(--glass-hover);
+}
+
+.socialLabel {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Compact GitHub Calendar */
+.calendarBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+}
+
+.calendarHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.calendarTitle {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--amber);
+  font-weight: 700;
+}
+
+.githubHandle {
+  font-family: var(--font-jetbrains), monospace;
+  font-size: 0.75rem;
+  color: var(--accent-secondary);
+  text-decoration: none;
+}
+
+.calendarScroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.25rem;
+}
+
+.calendarScroll::-webkit-scrollbar {
+  height: 4px;
+}
+.calendarScroll::-webkit-scrollbar-track {
+  background: var(--glass-bg);
+}
+.calendarScroll::-webkit-scrollbar-thumb {
+  background: var(--border-accent);
+  border-radius: 99px;
+}
